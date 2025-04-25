@@ -6,7 +6,7 @@ ${items.map(item => `
 \\end{twocolentry}
 \\begin{onecolentry}
   \\begin{highlights}
-    ${item.highlights.map(line => `\\item ${line}`).join('\n')}
+    ${item.bullets.map(line => `\\item ${line}`).join('\n')}
   \\end{highlights}
 \\end{onecolentry>`).join('\n')}
 `;

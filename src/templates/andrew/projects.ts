@@ -3,8 +3,8 @@ export const projects = (projectList: any[]) => `
 \\resumeSubHeadingListStart
 ${projectList.map(proj => `
 \\resumeSubheading
-  {${proj.title}}{${proj.dates}}
-  {${proj.organization}}{}
+  \\href{${proj.links}}{${proj.title}}{${proj.dates}}
+  {${proj.stacks}}{}
   \\resumeItemListStart
     ${proj.bullets.map((b: string) => `\\resumeItem{${b}}`).join('\n')}
   \\resumeItemListEnd`).join('\n')}

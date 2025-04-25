@@ -1,9 +1,9 @@
-export const skills = (data) => `
+export const skills = (skillsObj: Record<string, string[]>, interests: string[]) => `
 \\section{Skills}
 \\begin{onecolentry}
-  \\textbf{Languages:} ${data.languages.join(', ')}
-\\end{onecolentry}
-\\begin{onecolentry}
-  \\textbf{Technologies:} ${data.technologies.join(', ')}
+
+${Object.entries(skillsObj).map(([title, values]) => `\\textbf{${title}}{: ${values.join(', ')}} \\end{onecolentry}
+\\begin{onecolentry} \\\\`).join('\n') }
+  \\textbf{Interests:} ${interests.join(', ')}
 \\end{onecolentry}
 `;

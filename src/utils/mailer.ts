@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import nodemailer  from 'nodemailer';
-import User from '@/model/user.model';
+import User from '@/models/user.model';
 import bcryptjs from 'bcryptjs';
 
 async function sendMail(to: any, mailOption: { from: string | undefined; to: any; subject: string; html: string; }) {
